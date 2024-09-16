@@ -1,0 +1,144 @@
+/* General styles */
+body {
+    margin: 20px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.price-tag {
+    background-color: #7c3aed;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.ratings {
+    color: #888;
+    font-size: 14px;
+}
+
+.buy-btn {
+    background-color: #a10087;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #82006e;
+}
+
+/* Image section with shared borders */
+.image-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: none;
+    border-bottom: 2px solid #ccc; /* Shared bottom border */
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.image-carousel {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image-carousel .dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Details section with borders touching */
+.details {
+    display: flex;
+    padding: 0;
+    gap: 0;
+    border-bottom: 2px solid #ccc; /* Shared bottom border */
+    background-color: #fff;
+}
+
+.text-content {
+    width: 60%;
+    border-right: 2px solid #ccc; /* Shared right border */
+    padding: 20px;
+    background-color: #fefefe;
+    box-sizing: border-box;
+}
+
+.text-content .author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.pricing {
+    width: 40%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.license {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.license h3 {
+    margin: 0;
+    color: #7c3aed;
+}
+
+.info-box {
+    background-color: #f0f0f0;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Remove gaps between sections */
+section {
+    margin: 0;
+    padding: 0;
+}
