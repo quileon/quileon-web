@@ -4,16 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio</title>
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="stylesheet" href="./styles/icons/css/fontawesome.css" />
-        <link rel="stylesheet" href="./styles/icons/css/brands.css" />
+        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/icons/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="./assets/icons/css/brands.min.css" />
     </head>
     <body>
         <header class="navbar">
             <nav>
                 <ul class="navbar__list">
                     <li>
-                        <a href="#" class="navbar__home">home</a>
+                        <a href="#" id="navbar__home">home</a>
                     </li>
                     <li><a href="#about-me">about me</a></li>
                     <li><a href="#projects">projects</a></li>
@@ -22,14 +22,14 @@
         </header>
         <main>
             <section class="image__section">
-                <img src="./styles/images/profile.jpeg" alt="Main image" />
+                <img src="./assets/images/profile.jpeg" alt="Main image" />
             </section>
             <section class="main" id="about-me">
                 <div class="main__content">
-                    <article class="main__title">
+                    <article id="main__title">
                         <h1>Shaquille Arriza Hidayat</h1>
                     </article>
-                    <article class="main__description">
+                    <article id="main__description">
                         <p>
                             Network and Multimedia Engineer, Politeknik Negeri
                             Jakarta
@@ -49,7 +49,10 @@
                     <a href="https://github.com/Quillzyy" target="_blank">
                         <div class="link">
                             <div class="link__icon">
-                                <i class="fa-brands fa-github"></i>
+                                <img
+                                    src="./assets/images/github.png"
+                                    alt="GitHub Logo"
+                                />
                             </div>
                             <div>
                                 <h2>GitHub</h2>
@@ -65,7 +68,10 @@
                     >
                         <div class="link">
                             <div class="link__icon">
-                                <i class="fa-brands fa-linkedin"></i>
+                                <img
+                                    src="./assets/images/linkedin.png"
+                                    alt="LinkedIn Logo"
+                                />
                             </div>
                             <div>
                                 <h2>LinkedIn</h2>
@@ -80,7 +86,7 @@
             <section class="news" id="projects">
                 <article class="news__index">
                     <img
-                        src="./styles/images/smartendance.png"
+                        src="./assets/images/smartendance.png"
                         alt="Smartendance"
                         class="news__card"
                     />
