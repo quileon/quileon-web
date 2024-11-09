@@ -1,5 +1,3 @@
-import React from "react";
-
 const Skills = ({ title, skills }) => {
   return (
     <div className="flex flex-col gap-2 bg-[#EFC991] p-6 rounded-lg shadow-lg">

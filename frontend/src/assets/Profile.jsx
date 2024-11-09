@@ -1,5 +1,3 @@
-import React from "react";
-
 const Profile = () => {
   return (
     <div className="bg-[#346078] p-10">

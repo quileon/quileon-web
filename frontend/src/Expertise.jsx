@@ -1,4 +1,3 @@
-import React from "react";
 import Skills from "./assets/Skills";
 
 const Expertise = () => {

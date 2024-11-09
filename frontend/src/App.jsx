@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "./Heading";
 import Expertise from "./Expertise";
 import PastProjects from "./PastProjects";
