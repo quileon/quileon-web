@@ -9,7 +9,7 @@
 		"ghcr.io/prulloac/devcontainer-features/bun:1": {},
 		"ghcr.io/devcontainers-extra/features/starship:1": {},
 		"ghcr.io/devcontainers/features/sshd:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+		"ghcr.io/devcontainers-extra/features/podman-homebrew:1": {}
 	},
 	"postCreateCommand": "bash /workspaces/quillzyy-web/.devcontainer/startup.sh"
 
