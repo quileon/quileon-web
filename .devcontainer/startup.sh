@@ -15,3 +15,9 @@ sudo apt update && sudo apt install -y zoxide
 
 # zsh fish-like
 sudo apt update && sudo apt install -y zsh-syntax-highlighting zsh-autosuggestions
+
+# batcat
+sudo apt update && sudo apt install -y bat
+
+# chezmoi dotfiles
+chezmoi init --apply Quillzyy
