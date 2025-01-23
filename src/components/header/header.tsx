@@ -1,11 +1,6 @@
-"use client";
-
 import Home from "@public/Home";
 import { Smooch_Sans } from "next/font/google";
 import Link from "next/link";
-import CaretDown from "@public/CaretDown";
-import CaretUp from "@public/CaretUp";
-import { useState } from "react";
 import HeaderDropdown from "./header-dropdown";
 
 const smoochSans = Smooch_Sans({
@@ -14,11 +9,6 @@ const smoochSans = Smooch_Sans({
 });
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function toggleDropdown() {
-    setIsOpen(!isOpen);
-  }
   return (
     <header>
       <nav className="bg-pastel-green h-16 flex items-center relative">
@@ -65,16 +55,9 @@ export function Header() {
               </Link>
             </div>
           </div>
-          <div onClick={toggleDropdown} className="cursor-pointer lg:hidden">
-            {isOpen ? (
-              <CaretUp height={15} width={25} />
-            ) : (
-              <CaretDown height={15} width={25} />
-            )}
-          </div>
+          <HeaderDropdown />
         </div>
       </nav>
-      {isOpen && <HeaderDropdown />}
     </header>
   );
 }
