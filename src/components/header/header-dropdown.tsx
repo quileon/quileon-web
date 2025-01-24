@@ -2,7 +2,7 @@
 
 import { Smooch_Sans } from "next/font/google";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CaretDown from "@public/CaretDown";
 import CaretUp from "@public/CaretUp";
 
@@ -13,11 +13,28 @@ const smoochSans = Smooch_Sans({
 export default function HeaderDropdown() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   function toggleDropdown() {
     setIsOpen(!isOpen);
   }
+
   return (
-    <div>
+    <div ref={dropdownRef}>
       <div onClick={toggleDropdown} className="cursor-pointer lg:hidden">
         {isOpen ? (
           <CaretUp height={15} width={25} />
