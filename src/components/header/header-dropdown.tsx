@@ -54,7 +54,7 @@ export default function HeaderDropdown() {
               <Link href="/about">About</Link>
             </li>
             <li className="hover:bg-pastel-pink px-4">
-              <Link href="/work">Work</Link>
+              <Link href="/works">Work</Link>
             </li>
             <li className="hover:bg-pastel-pink px-4">
               <Link href="/blogs">Blogs</Link>

@@ -39,11 +39,11 @@ export function Header() {
                   About
                 </h1>
               </Link>
-              <Link href="/work">
+              <Link href="/works">
                 <h1
                   className={`text-4xl font-bold text-pastel-white ${smoochSans.className} hover:underline cursor-pointer`}
                 >
-                  Work
+                  Works
                 </h1>
               </Link>
               <Link href="/blogs">
