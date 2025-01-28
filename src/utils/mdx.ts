@@ -1,14 +1,13 @@
-#!/usr/bin/env bun
-
 import { compileMDX } from "next-mdx-remote/rsc";
 import Bun from "bun";
 
 interface MDXProps {
   title: string;
-  subtitle: string;
+  subTitle: string;
   coverImage: string;
   date: string;
   topic: string[];
+  link: string;
 }
 
 export async function getSingleMDX(paths: string) {
