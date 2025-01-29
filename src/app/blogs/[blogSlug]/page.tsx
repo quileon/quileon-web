@@ -18,6 +18,6 @@ export default async function WorkPage({ params }: WorkPageProps) {
 export async function generateStaticParams() {
   const mdxs = await getAllMDX("./public/md/blogs");
   return mdxs.map((mdx) => ({
-    workSlug: mdx.metadata.filename.replace(/\.md$/, ""),
+    blogSlug: mdx.metadata.filename.replace(/\.md$/, ""),
   }));
 }
