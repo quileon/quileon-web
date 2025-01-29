@@ -12,17 +12,18 @@ export default function HomeHero() {
         I am Shaquille, an undergraduate network engineer from Politeknik Negeri
         Jakarta. My passion is Linux and VIM.
       </p>
-      <Link href="/about">
-        <div className="flex items-center gap-2 w-44 py-0.5 pl-0.5 bg-pastel-pink rounded-full cursor-pointer">
-          <Image
-            src={ProfilePicture}
-            alt="Profile Picture"
-            width={45}
-            height={45}
-            className="rounded-full"
-          />
-          <p className="text-xl font-medium text-black">About me!</p>
-        </div>
+      <Link
+        href="/about"
+        className="flex items-center gap-2 w-44 py-0.5 pl-0.5 bg-pastel-pink rounded-full cursor-pointer"
+      >
+        <Image
+          src={ProfilePicture}
+          alt="Profile Picture"
+          width={45}
+          height={45}
+          className="rounded-full"
+        />
+        <p className="text-xl font-medium text-black">About me!</p>
       </Link>
     </div>
   );

@@ -51,6 +51,7 @@ export default function HeaderDropdown() {
               <Link
                 href="/"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
@@ -59,6 +60,7 @@ export default function HeaderDropdown() {
               <Link
                 href="/about"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
@@ -67,6 +69,7 @@ export default function HeaderDropdown() {
               <Link
                 href="/works"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                onClick={() => setIsOpen(false)}
               >
                 Work
               </Link>
@@ -75,6 +78,7 @@ export default function HeaderDropdown() {
               <Link
                 href="/blogs"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                onClick={() => setIsOpen(false)}
               >
                 Blogs
               </Link>

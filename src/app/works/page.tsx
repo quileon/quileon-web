@@ -2,10 +2,10 @@ import { getAllMDX } from "@/utils/mdx";
 import Link from "next/link";
 
 export default async function WorkHomepage() {
-  const mdxs = await getAllMDX("./public/works");
+  const works = await getAllMDX("./public/md/works");
   return (
     <div className="flex flex-col gap-4 m-4">
-      {mdxs.map((mdx) => (
+      {works.map((mdx) => (
         <Link
           key={mdx.frontmatter.title}
           href={`/works/${mdx.metadata.filename.replace(/\.md$/, "")}`}
