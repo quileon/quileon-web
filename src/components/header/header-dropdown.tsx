@@ -46,18 +46,38 @@ export default function HeaderDropdown() {
         <nav
           className={`${smoochSans.className} font-bold text-4xl text-pastel-brown absolute w-full top-16 left-0`}
         >
-          <ul className="flex flex-col gap-2 absolute bg-pastel-grey w-full">
-            <li className="hover:bg-pastel-pink px-4">
-              <Link href="/">Home</Link>
+          <ul className="flex flex-col absolute bg-pastel-grey w-full">
+            <li>
+              <Link
+                href="/"
+                className="hover:bg-pastel-pink px-4 py-1 block w-full"
+              >
+                Home
+              </Link>
             </li>
-            <li className="hover:bg-pastel-pink px-4">
-              <Link href="/about">About</Link>
+            <li>
+              <Link
+                href="/about"
+                className="hover:bg-pastel-pink px-4 py-1 block w-full"
+              >
+                About
+              </Link>
             </li>
-            <li className="hover:bg-pastel-pink px-4">
-              <Link href="/work">Work</Link>
+            <li>
+              <Link
+                href="/works"
+                className="hover:bg-pastel-pink px-4 py-1 block w-full"
+              >
+                Work
+              </Link>
             </li>
-            <li className="hover:bg-pastel-pink px-4">
-              <Link href="/blogs">Blogs</Link>
+            <li>
+              <Link
+                href="/blogs"
+                className="hover:bg-pastel-pink px-4 py-1 block w-full"
+              >
+                Blogs
+              </Link>
             </li>
           </ul>
         </nav>
