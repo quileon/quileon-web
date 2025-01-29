@@ -18,11 +18,11 @@ interface WorkListProps {
 
 export default async function WorkList({ works }: WorkListProps) {
   return (
-    <article className="flex flex-col gap-10 py-2 lg:px-10">
+    <article className="flex flex-col gap-10 lg:px-10">
       {works.map((mdx) => (
         <div key={mdx.metadata.filename} className="flex flex-col gap-3">
           <Image
-            src={`/works/${mdx.frontmatter.coverImage}`}
+            src={`/md/works/${mdx.frontmatter.coverImage}`}
             alt={mdx.frontmatter.title}
             width={600}
             height={300}
