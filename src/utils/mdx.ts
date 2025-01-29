@@ -1,7 +1,7 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 import Bun from "bun";
 
-interface MDXProps {
+export interface MDXProps {
   title: string;
   subTitle: string;
   coverImage: string;
@@ -36,5 +36,13 @@ export async function getAllMDX(paths: string) {
       ...mdx,
     });
   }
+
+  mdxFiles.sort((a, b) => {
+    return (
+      new Date(b.frontmatter.date).getTime() -
+      new Date(a.frontmatter.date).getTime()
+    );
+  });
+
   return mdxFiles;
 }

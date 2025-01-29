@@ -1,15 +1,25 @@
-import { getAllMDX } from "@/utils/mdx";
 import Image from "next/image";
 import Link from "next/link";
 import OpenLink from "@public/OpenLink";
 import RightArrow from "@public/RightArrow";
+import { MDXProps } from "@/utils/mdx";
+import { ReactElement } from "react";
 
-export default async function WorkList() {
-  const mdxs = await getAllMDX("./public/works");
+interface WorkListProps {
+  works: {
+    content: ReactElement;
+    metadata: {
+      filename: string;
+      path: string;
+    };
+    frontmatter: MDXProps;
+  }[];
+}
 
+export default async function WorkList({ works }: WorkListProps) {
   return (
-    <article className="flex flex-col gap-10 lg:p-10">
-      {mdxs.map((mdx) => (
+    <article className="flex flex-col gap-10 py-2 lg:px-10">
+      {works.map((mdx) => (
         <div key={mdx.metadata.filename} className="flex flex-col gap-3">
           <Image
             src={`/works/${mdx.frontmatter.coverImage}`}
@@ -19,9 +29,9 @@ export default async function WorkList() {
             className="rounded-lg w-full h-[200px] object-cover border-pastel-grey border-2"
           />
           <section className="flex flex-col px-2 lg:flex-row gap-4">
-            <h1 className="text-2xl font-semibold lg:w-5/12">
+            <h3 className="text-2xl font-semibold lg:w-5/12">
               {mdx.frontmatter.title}
-            </h1>
+            </h3>
             <div className="lg:w-7/12 flex flex-col gap-4">
               <p>{mdx.frontmatter.subTitle}</p>
               <div className="flex flex-row gap-10 text-pastel-brown font-semibold text-md">
