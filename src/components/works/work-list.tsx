@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import OpenLink from "@public/OpenLink";
-import RightArrow from "@public/RightArrow";
+import OpenLink from "@public/open-link";
+import RightArrow from "@public/right-arrow";
 import { MDXProps } from "@/utils/mdx";
 import { ReactElement } from "react";
 

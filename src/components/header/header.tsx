@@ -1,4 +1,4 @@
-import Home from "@public/Home";
+import Home from "@public/home";
 import { Smooch_Sans } from "next/font/google";
 import Link from "next/link";
 import HeaderDropdown from "./header-dropdown";
