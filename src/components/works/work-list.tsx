@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import OpenLink from "@public/OpenLink";
-import RightArrow from "@public/RightArrow";
+import OpenLink from "@public/open-link";
+import RightArrow from "@public/right-arrow";
 import { MDXProps } from "@/utils/mdx";
 import { ReactElement } from "react";
 
@@ -37,19 +37,29 @@ export default async function WorkList({ works }: WorkListProps) {
               <div className="flex flex-row gap-10 text-pastel-brown font-semibold text-md">
                 <Link
                   href={`/works/${mdx.metadata.filename.replace(/\.md$/, "")}`}
-                  className="flex flex-row gap-2 items-center"
+                  className="flex flex-row gap-2 items-center group"
                 >
-                  <p>Read case study</p>
-                  <RightArrow height={14} width={14} />
+                  <p className="group-hover:underline transition-all">
+                    Read case study
+                  </p>
+                  <RightArrow
+                    height={14}
+                    width={14}
+                    className="group-hover:translate-x-[2px] transition-transform"
+                  />
                 </Link>
                 {mdx.frontmatter.link && (
                   <Link
                     href={mdx.frontmatter.link}
-                    className="flex flex-row gap-2 items-center"
+                    className="flex flex-row gap-2 items-center group"
                     target="_blank"
                   >
-                    <p>View project</p>
-                    <OpenLink height={14} width={14} />
+                    <p className="group-hover:underline">View project</p>
+                    <OpenLink
+                      height={14}
+                      width={14}
+                      className="group-hover:translate-y-[-2px] group-hover:translate-x-[2px] transition-transform"
+                    />
                   </Link>
                 )}
               </div>

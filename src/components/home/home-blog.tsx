@@ -13,7 +13,7 @@ export default async function HomeBlog() {
           <Link
             key={mdx.metadata.filename}
             href={`/blogs/${mdx.metadata.filename.replace(/\.md$/, "")}`}
-            className="lg:w-1/2 flex flex-col gap-1 bg-pastel-pink p-4 rounded-lg"
+            className="lg:w-1/2 flex flex-col gap-1 bg-pastel-pink p-4 rounded-lg  hover:ring-2 hover:ring-pastel-grey"
           >
             <h3 className="text-sm font-semibold">{mdx.frontmatter.title}</h3>
             <section className="flex flex-col gap-2">

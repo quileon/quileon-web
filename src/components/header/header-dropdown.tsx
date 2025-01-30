@@ -3,8 +3,8 @@
 import { Smooch_Sans } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import CaretDown from "@public/CaretDown";
-import CaretUp from "@public/CaretUp";
+import CaretDown from "@public/caret-down";
+import CaretUp from "@public/caret-up";
 
 const smoochSans = Smooch_Sans({
   subsets: ["latin"],
