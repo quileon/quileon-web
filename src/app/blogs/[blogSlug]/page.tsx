@@ -1,4 +1,4 @@
-import { getAllMDX, getSingleMDX } from "@/utils/mdx";
+import { getAllMDXArticles, getSingleMDXArticle } from "@/utils/mdx";
 
 interface WorkPageProps {
   params: Promise<{ blogSlug: string }>;
@@ -6,7 +6,7 @@ interface WorkPageProps {
 
 export default async function WorkPage({ params }: WorkPageProps) {
   const { blogSlug } = await params;
-  const mdx = await getSingleMDX(`./public/md/blogs/${blogSlug}.md`);
+  const mdx = await getSingleMDXArticle(`./public/md/blogs/${blogSlug}.md`);
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
 }
 
 export async function generateStaticParams() {
-  const mdxs = await getAllMDX("./public/md/blogs");
+  const mdxs = await getAllMDXArticles("./public/md/blogs");
   return mdxs.map((mdx) => ({
     blogSlug: mdx.metadata.filename.replace(/\.md$/, ""),
   }));

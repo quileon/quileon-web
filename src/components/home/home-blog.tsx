@@ -1,8 +1,8 @@
-import { getAllMDX } from "@/utils/mdx";
+import { getAllMDXArticles } from "@/utils/mdx";
 import Link from "next/link";
 
 export default async function HomeBlog() {
-  const blogs = await getAllMDX("./public/md/blogs");
+  const blogs = await getAllMDXArticles("./public/md/blogs");
   blogs.slice(0, 2);
 
   return (

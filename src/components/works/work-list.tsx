@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import OpenLink from "@public/open-link";
 import RightArrow from "@public/right-arrow";
-import { MDXProps } from "@/utils/mdx";
+import { MDXArticleProps } from "@/utils/mdx";
 import { ReactElement } from "react";
 
 interface WorkListProps {
@@ -12,7 +12,7 @@ interface WorkListProps {
       filename: string;
       path: string;
     };
-    frontmatter: MDXProps;
+    frontmatter: MDXArticleProps;
   }[];
 }
 

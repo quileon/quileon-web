@@ -1,8 +1,8 @@
-import { getAllMDX } from "@/utils/mdx";
+import { getAllMDXArticles } from "@/utils/mdx";
 import Link from "next/link";
 
 export default async function WorkHomepage() {
-  const works = await getAllMDX("./public/md/blogs");
+  const works = await getAllMDXArticles("./public/md/blogs");
   return (
     <div className="flex flex-col gap-4 m-4">
       {works.map((mdx) => (
