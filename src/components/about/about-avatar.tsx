@@ -2,7 +2,7 @@ import { getMDXAbout } from "@/utils/mdx";
 import Image from "next/image";
 
 export default async function AboutAvatar() {
-  const mdx = await getMDXAbout();
+  const mdx = await getMDXAbout("./public/md/about.mdx");
 
   return (
     <section className="flex flex-col items-center lg:sticky lg:top-8">

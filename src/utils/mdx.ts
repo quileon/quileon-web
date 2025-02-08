@@ -58,11 +58,11 @@ export async function getAllMDXArticles(paths: string) {
   return mdxFiles;
 }
 
-export async function getMDXAbout(): Promise<{
+export async function getMDXAbout(paths: string): Promise<{
   frontmatter: MDXAboutProps;
   content: ReactElement;
 }> {
-  const mdxSource = await Bun.file("./public/md/about.md").text();
+  const mdxSource = await Bun.file(paths).text();
   const mdx = await compileMDX<MDXAboutProps>({
     source: mdxSource,
     options: { parseFrontmatter: true },

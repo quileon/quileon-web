@@ -1,7 +1,7 @@
 import { getMDXAbout } from "@/utils/mdx";
 
 export default async function AboutProfile() {
-  const mdx = await getMDXAbout();
+  const mdx = await getMDXAbout("./public/md/about.mdx");
 
   return (
     <section className="flex flex-col gap-2 items-center">
