@@ -71,7 +71,7 @@ export default function HeaderDropdown() {
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
                 onClick={() => setIsOpen(false)}
               >
-                Work
+                Works
               </Link>
             </li>
             <li>
