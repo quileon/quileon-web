@@ -18,7 +18,25 @@ export default {
         "pastel-brown": "#d4a373",
         "pastel-grey": "#e9edc9",
       },
+      keyframes: {
+        running: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-4px)" },
+        },
+        wag: {
+          "0%, 100%": { transform: "rotate(-10deg)" },
+          "50%": { transform: "rotate(10deg)" },
+        },
+      },
+      animation: {
+        running: "running 0.5s ease-in-out infinite",
+        wag: "wag 1s ease-in-out infinite",
+      },
+    },
+    plugins: [typography],
+    // Ensure all Tailwind features are enabled
+    corePlugins: {
+      preflight: true,
     },
   },
-  plugins: [typography],
 } satisfies Config;
