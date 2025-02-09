@@ -1,19 +1,14 @@
-import { getAllMDXArticles } from "@/utils/mdx";
-import Link from "next/link";
+import WorksWork from "@/components/works/works-work";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default async function WorkHomepage() {
-  const works = await getAllMDXArticles("./public/md/works");
   return (
-    <div className="flex flex-col gap-4 m-4">
-      {works.map((mdx) => (
-        <Link
-          key={mdx.frontmatter.title}
-          href={`/works/${mdx.metadata.filename.replace(/\.md$/, "")}`}
-          className="block outline-1 shadow-md p-4"
-        >
-          <h1 className="text-lg">{mdx.frontmatter.title}</h1>
-        </Link>
-      ))}
+    <div
+      className={`container max-w-screen-lg mx-auto px-4 py-8 ${inter.className} flex flex-col gap-12`}
+    >
+      <WorksWork />
     </div>
   );
 }
