@@ -9,6 +9,8 @@
     "lint": "bun run --bun next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "bun": "^1.2.10",
     "next": "15.3.1",
     "next-mdx-remote": "^5.0.0",
