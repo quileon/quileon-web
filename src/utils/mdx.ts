@@ -1,5 +1,5 @@
 import { compileMDX } from "next-mdx-remote/rsc";
-import Bun from "bun";
+// import Bun from "bun";
 import { ReactElement } from "react";
 
 export interface MDXArticleProps {
