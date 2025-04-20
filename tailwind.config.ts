@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
+import catppuccin from "@catppuccin/tailwindcss"; // Added import
 
 export default {
   content: [
@@ -39,4 +40,11 @@ export default {
       preflight: true,
     },
   },
+  plugins: [
+    typography,
+    catppuccin({
+      // prefix: "ctp", // Optional: string - Prefix for generated utilities, e.g. `text-ctp-blue`
+      // defaultFlavour: "latte", // Optional: string - The default flavour for utilities, e.g. `text-blue`
+    }),
+  ],
 } satisfies Config;

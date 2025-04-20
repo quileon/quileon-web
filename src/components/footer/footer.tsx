@@ -11,7 +11,7 @@ const smoochSans = Smooch_Sans({
 export default function Footer() {
   return (
     <footer
-      className={`bg-pastel-brown ${smoochSans.className} flex flex-col items-center justify-center gap-1 h-20 pt-2`}
+      className={`bg-yellow ${smoochSans.className} flex flex-col items-center justify-center gap-1 h-20 pt-2 text-base`}
     >
       <nav className="flex flex-row gap-4">
         <Link href="https://github.com/Quillzyy" target="_blank">
@@ -24,9 +24,7 @@ export default function Footer() {
           <LinkedIn className="h-5 w-5" />
         </Link>
       </nav>
-      <h2 className="text-2xl font-bold text-pastel-white">
-        quillzyy powered 2024
-      </h2>
+      <h2 className="text-2xl font-bold">quillzyy powered 2024</h2>
     </footer>
   );
 }
