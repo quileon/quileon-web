@@ -13,7 +13,7 @@ export default async function HomeBlog() {
           <Link
             key={mdx.metadata.filename}
             href={`/blogs/${mdx.metadata.filename.replace(/\.md$/, "")}`}
-            className="lg:w-1/2 flex flex-col gap-1 bg-pastel-pink p-4 rounded-lg  hover:ring-2 hover:ring-pastel-grey"
+            className="lg:w-1/2 flex flex-col gap-1 bg-mantle p-4 rounded-lg hover:ring-2 hover:ring-maroon"
           >
             <h3 className="text-sm font-semibold">{mdx.frontmatter.title}</h3>
             <section className="flex flex-col gap-2">
@@ -41,7 +41,7 @@ export default async function HomeBlog() {
                 {mdx.frontmatter.topic.map((topic) => (
                   <li
                     key={topic}
-                    className="bg-pastel-brown text-xs rounded-full text-white px-2 py-0.5"
+                    className="bg-maroon/20 text-xs text-maroon rounded-full px-2 py-0.5"
                   >
                     {topic}
                   </li>

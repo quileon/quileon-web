@@ -12,7 +12,7 @@ export default function HomeHero() {
       </p>
       <Link
         href="/about"
-        className="flex items-center gap-2 w-44 py-0.5 pl-0.5 bg-pastel-pink rounded-full cursor-pointer hover:ring-2 hover:ring-pastel-brown hover:ring-opacity-75"
+        className="flex items-center gap-3 w-44 py-0.5 pl-0.5 bg-mantle rounded-full cursor-pointer hover:ring-2 hover:ring-peach hover:ring-opacity-75"
       >
         <Image
           src={ProfilePicture}
@@ -21,7 +21,7 @@ export default function HomeHero() {
           height={45}
           className="rounded-full"
         />
-        <p className="text-xl font-medium text-black">About me!</p>
+        <p className="text-xl font-semibold">About me!</p>
       </Link>
     </div>
   );

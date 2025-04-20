@@ -11,7 +11,7 @@ export default async function AboutAvatar() {
         alt="Profile Image"
         width={200}
         height={200}
-        className="rounded-full border-pastel-brown border-2"
+        className="rounded-full border-teal border-2"
       />
     </section>
   );
