@@ -20,6 +20,15 @@ export interface MDXFrontmatterBlogProps {
   filename: string;
 }
 
+export interface MDXFrontmatterUserProps {
+  name: string;
+  title: string;
+  description: string;
+  avatar: string;
+  filename: string;
+  directory: string;
+}
+
 export async function getSingleFrontmatterWork(
   paths: string,
 ): Promise<MDXFrontmatterWorkProps> {
@@ -90,4 +99,16 @@ export async function getAllFrontmatterBlogs(
   });
 
   return mdxFiles;
+}
+
+export async function getFrontmatterUser(
+  paths: string,
+): Promise<MDXFrontmatterUserProps> {
+  const mdxSource = await Bun.file(paths).text();
+  const mdx = matter(mdxSource);
+
+  mdx.data.directory = paths.replace(/^public\//, "");
+  mdx.data.filename = paths.split("/").pop();
+
+  return mdx.data as MDXFrontmatterUserProps;
 }
