@@ -11,7 +11,7 @@ interface WorkListPageProps {
 
 export default function WorkListPage({ works }: WorkListPageProps) {
   return (
-    <article className="flex flex-col gap-10 sm:px-10">
+    <article className="flex flex-col gap-12 sm:px-10">
       {works.map((work) => (
         <section key={work.filename} className="flex flex-col gap-10">
           <Link
