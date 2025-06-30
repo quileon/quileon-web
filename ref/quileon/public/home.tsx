@@ -2,10 +2,10 @@ import * as React from "react";
 import { SVGProps } from "react";
 const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={576}
+    fill="none"
     height={512}
     viewBox="0 0 576 512"
-    fill="none"
+    width={576}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -15,4 +15,5 @@ const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
 export default SVGComponent;

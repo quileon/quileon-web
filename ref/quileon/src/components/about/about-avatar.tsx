@@ -1,5 +1,6 @@
-import { getMDXAbout } from "@/utils/mdx";
 import Image from "next/image";
+
+import { getMDXAbout } from "@/utils/mdx";
 
 export default async function AboutAvatar() {
   const mdx = await getMDXAbout("./public/md/about.mdx");
@@ -7,11 +8,11 @@ export default async function AboutAvatar() {
   return (
     <section className="flex flex-col items-center lg:sticky lg:top-8">
       <Image
-        src={mdx.frontmatter.avatar}
         alt="Profile Image"
-        width={200}
-        height={200}
         className="rounded-full border-teal border-2"
+        height={200}
+        src={mdx.frontmatter.avatar}
+        width={200}
       />
     </section>
   );

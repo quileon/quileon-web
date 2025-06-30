@@ -26,6 +26,7 @@ export default function HeaderDropdown() {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
@@ -35,7 +36,7 @@ export default function HeaderDropdown() {
 
   return (
     <div ref={dropdownRef}>
-      <div onClick={toggleDropdown} className="cursor-pointer lg:hidden">
+      <div className="cursor-pointer lg:hidden" onClick={toggleDropdown}>
         {isOpen ? (
           <CaretUp height={15} width={25} />
         ) : (
@@ -49,8 +50,8 @@ export default function HeaderDropdown() {
           <ul className="flex flex-col absolute bg-pastel-grey w-full">
             <li>
               <Link
-                href="/"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                href="/"
                 onClick={() => setIsOpen(false)}
               >
                 Home
@@ -58,8 +59,8 @@ export default function HeaderDropdown() {
             </li>
             <li>
               <Link
-                href="/about"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                href="/about"
                 onClick={() => setIsOpen(false)}
               >
                 About
@@ -67,8 +68,8 @@ export default function HeaderDropdown() {
             </li>
             <li>
               <Link
-                href="/works"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                href="/works"
                 onClick={() => setIsOpen(false)}
               >
                 Works
@@ -76,8 +77,8 @@ export default function HeaderDropdown() {
             </li>
             <li>
               <Link
-                href="/blogs"
                 className="hover:bg-pastel-pink px-4 py-1 block w-full"
+                href="/blogs"
                 onClick={() => setIsOpen(false)}
               >
                 Blogs

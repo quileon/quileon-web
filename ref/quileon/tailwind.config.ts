@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 import typography from "@tailwindcss/typography";
 import catppuccin from "@catppuccin/tailwindcss"; // Added import
 

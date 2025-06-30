@@ -1,8 +1,10 @@
-import { getAllMDXArticles } from "@/utils/mdx";
 import Link from "next/link";
+
+import { getAllMDXArticles } from "@/utils/mdx";
 
 export default async function HomeBlog() {
   const blogs = await getAllMDXArticles("./public/md/blogs");
+
   blogs.slice(0, 2);
 
   return (
@@ -12,8 +14,8 @@ export default async function HomeBlog() {
         {blogs.map((mdx) => (
           <Link
             key={mdx.metadata.filename}
-            href={`/blogs/${mdx.metadata.filename.replace(/\.md$/, "")}`}
             className="lg:w-1/2 flex flex-col gap-1 bg-mantle p-4 rounded-lg hover:ring-2 hover:ring-maroon"
+            href={`/blogs/${mdx.metadata.filename.replace(/\.md$/, "")}`}
           >
             <h3 className="text-sm font-semibold">{mdx.frontmatter.title}</h3>
             <section className="flex flex-col gap-2">
@@ -25,7 +27,7 @@ export default async function HomeBlog() {
                     year: "numeric",
                     month: "2-digit",
                     day: "2-digit",
-                  }
+                  },
                 )}
               >
                 {new Date(mdx.frontmatter.date).toLocaleDateString(
@@ -34,7 +36,7 @@ export default async function HomeBlog() {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
-                  }
+                  },
                 )}
               </time>
               <ul className="flex flex-row gap-2">

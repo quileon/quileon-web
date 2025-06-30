@@ -11,15 +11,15 @@ export default function HomeHero() {
         Jakarta. My passion is Linux and VIM.
       </p>
       <Link
-        href="/about"
         className="flex items-center gap-3 w-44 py-0.5 pl-0.5 bg-mantle rounded-full cursor-pointer hover:ring-2 hover:ring-peach hover:ring-opacity-75"
+        href="/about"
       >
         <Image
-          src={ProfilePicture}
           alt="Profile Picture"
-          width={45}
-          height={45}
           className="rounded-full"
+          height={45}
+          src={ProfilePicture}
+          width={45}
         />
         <p className="text-xl font-semibold">About me!</p>
       </Link>

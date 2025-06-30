@@ -2,10 +2,10 @@ import * as React from "react";
 import { SVGProps } from "react";
 const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={448}
+    fill="none"
     height={512}
     viewBox="0 0 448 512"
-    fill="none"
+    width={448}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -21,9 +21,10 @@ const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
     </g>
     <defs>
       <clipPath id="clip0_15_5">
-        <rect width={448} height={512} fill="white" />
+        <rect fill="white" height={512} width={448} />
       </clipPath>
     </defs>
   </svg>
 );
+
 export default SVGComponent;

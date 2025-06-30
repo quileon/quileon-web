@@ -1,5 +1,6 @@
-import WorksWork from "@/components/works/works-work";
 import { Inter } from "next/font/google";
+
+import WorksWork from "@/components/works/works-work";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -27,18 +27,21 @@ export async function getSingleMDXArticle(paths: string): Promise<{
     source: mdxSource,
     options: { parseFrontmatter: true },
   });
+
   return mdx;
 }
 
 export async function getAllMDXArticles(paths: string) {
   const mdxGlob = new Bun.Glob("*.md");
   const mdxFiles = [];
+
   for await (const file of mdxGlob.scan(paths)) {
     const mdxSource = await Bun.file(`${paths}/${file}`).text();
     const mdx = await compileMDX<MDXArticleProps>({
       source: mdxSource,
       options: { parseFrontmatter: true },
     });
+
     mdxFiles.push({
       metadata: {
         filename: file,
@@ -67,5 +70,6 @@ export async function getMDXAbout(paths: string): Promise<{
     source: mdxSource,
     options: { parseFrontmatter: true },
   });
+
   return mdx;
 }
