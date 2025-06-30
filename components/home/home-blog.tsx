@@ -1,9 +1,9 @@
 import { Card, CardHeader } from "@heroui/card";
-
-import { getAllFrontmatterBlogs } from "@/config/mdx";
 import { Divider } from "@heroui/divider";
 import { Chip } from "@heroui/chip";
 import Link from "next/link";
+
+import { getAllFrontmatterBlogs } from "@/config/mdx";
 
 export default async function HomeBlogPage() {
   const blogs = await getAllFrontmatterBlogs("public/markdown/blogs");
@@ -17,8 +17,8 @@ export default async function HomeBlogPage() {
         {blogs.map((blog) => (
           <Card
             key={blog.filename}
-            className="sm:w-1/2"
             as={Link}
+            className="sm:w-1/2"
             href={`/blogs/${blog.filename.replace(/\.md$/, "")}`}
           >
             <CardHeader className="flex flex-col gap-1 items-start">

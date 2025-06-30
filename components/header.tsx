@@ -39,16 +39,16 @@ export default function Header() {
         <Link
           isExternal
           aria-label="GitHub"
-          href={siteConfig.links.github}
           color="foreground"
+          href={siteConfig.links.github}
         >
           <Github />
         </Link>
         <Link
           isExternal
           aria-label="LinkedIn"
-          href={siteConfig.links.linkedin}
           color="foreground"
+          href={siteConfig.links.linkedin}
         >
           <Linkedin />
         </Link>
@@ -57,16 +57,16 @@ export default function Header() {
         <Link
           isExternal
           aria-label="GitHub"
-          href={siteConfig.links.github}
           color="foreground"
+          href={siteConfig.links.github}
         >
           <Github />
         </Link>
         <Link
           isExternal
           aria-label="LinkedIn"
-          href={siteConfig.links.linkedin}
           color="foreground"
+          href={siteConfig.links.linkedin}
         >
           <Linkedin />
         </Link>

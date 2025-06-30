@@ -5,7 +5,7 @@ import HomeOldWorksPage from "@/components/home/home-old-work";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-12 lg:gap-16 mx-auto mb-12">
+    <div className="flex flex-col gap-12 lg:gap-16 mx-auto">
       <HomeHeroPage />
       <HomeNewWorkPage />
       <HomeBlogPage />
