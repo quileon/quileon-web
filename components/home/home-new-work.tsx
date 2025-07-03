@@ -1,6 +1,7 @@
+import { getAllFrontmatterWorks } from "@/config/mdx";
+
 import WorkListPage from "../work/work-list";
 
-import { getAllFrontmatterWorks } from "@/config/mdx";
 
 export default async function HomeNewWorkPage() {
   const works = await getAllFrontmatterWorks("public/markdown/works");

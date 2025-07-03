@@ -1,6 +1,7 @@
+import { MDXFrontmatterBlogProps } from "@/config/mdx";
+
 import BlogSearchClient from "./blog-search-client";
 
-import { MDXFrontmatterBlogProps } from "@/config/mdx";
 
 interface BlogsPageSearchProps {
   topic?: string;

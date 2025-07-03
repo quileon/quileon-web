@@ -30,7 +30,7 @@ export interface MDXFrontmatterUserProps {
 }
 
 export async function getSingleFrontmatterWork(
-  paths: string,
+  paths: string
 ): Promise<MDXFrontmatterWorkProps> {
   const mdxSource = await Bun.file(paths).text();
   const mdx = matter(mdxSource);
@@ -42,7 +42,7 @@ export async function getSingleFrontmatterWork(
 }
 
 export async function getAllFrontmatterWorks(
-  paths: string,
+  paths: string
 ): Promise<MDXFrontmatterWorkProps[]> {
   const mdxGlob = new Bun.Glob("*.md");
   const mdxFiles: MDXFrontmatterWorkProps[] = [];
@@ -66,7 +66,7 @@ export async function getAllFrontmatterWorks(
 }
 
 export async function getSingleFrontmatterBlog(
-  paths: string,
+  paths: string
 ): Promise<MDXFrontmatterBlogProps> {
   const mdxSource = await Bun.file(paths).text();
   const mdx = matter(mdxSource);
@@ -78,7 +78,7 @@ export async function getSingleFrontmatterBlog(
 }
 
 export async function getAllFrontmatterBlogs(
-  paths: string,
+  paths: string
 ): Promise<MDXFrontmatterBlogProps[]> {
   const mdxGlob = new Bun.Glob("*.md");
   const mdxFiles: MDXFrontmatterBlogProps[] = [];
@@ -102,7 +102,7 @@ export async function getAllFrontmatterBlogs(
 }
 
 export async function getFrontmatterUser(
-  paths: string,
+  paths: string
 ): Promise<MDXFrontmatterUserProps> {
   const mdxSource = await Bun.file(paths).text();
   const mdx = matter(mdxSource);
