@@ -24,7 +24,7 @@ export default async function BlogsPage({
     filteredBlogs = filteredBlogs.filter(
       (blog) =>
         blog.title.toLowerCase().includes(title.toLowerCase()) ||
-        blog.subtitle.toLowerCase().includes(title.toLowerCase()),
+        blog.subtitle.toLowerCase().includes(title.toLowerCase())
     );
   }
 
@@ -38,9 +38,17 @@ export default async function BlogsPage({
 
 export async function generateStaticParams() {
   const blogs = await getAllFrontmatterBlogs("public/markdown/blogs");
+  const params = [];
 
-  return blogs.map((blog) => ({
-    topic: blog.topic,
-    title: blog.title,
-  }));
+  // Generate params for each topic
+  for (const blog of blogs) {
+    for (const topic of blog.topic) {
+      params.push({ topic });
+    }
+  }
+
+  // Add a param for no filters
+  params.push({});
+
+  return params;
 }
