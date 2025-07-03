@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+.next/
+build/
+dist/
+
+# Reference/old files
+ref/
+
+# Generated files
+bun.lock
+package-lock.json
+*.min.css
+*.min.js
+
+# Public assets
+public/
+
+# Config files that should remain as-is
+.gitignore
+.npmrc
+*.svg
+*.jpg
+*.jpeg
+*.png
+*.ico
+
+# MDX/Markdown files
+*.md
+*.mdx
