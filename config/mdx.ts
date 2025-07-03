@@ -13,10 +13,10 @@ export interface MDXFrontmatterWorkProps {
 
 export interface MDXFrontmatterBlogProps {
   title: string;
+  subtitle: string;
   date: string;
   topic: string[];
   directory: string;
-  cover: string;
   filename: string;
 }
 

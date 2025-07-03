@@ -1,7 +1,6 @@
 ---
 title: "What is Nextcloud?"
 subtitle: "Nextcloud is a software that allows sharing, collaboration, and communication."
-cover: ""
 date: "2024-12-08T10:12:32.639Z"
 topic:
   - "cloud"

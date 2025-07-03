@@ -1,10 +1,9 @@
 ---
-title: "The modern JavaScript runtime"
+title: "Bun: The modern JavaScript runtime"
 subtitle: "Bun is a modern JavaScript runtime that majors in speed and managing APIs."
-cover: ""
 date: "2025-01-03T08:12:32.639Z"
 topic:
-  - "cloud"
+  - "web"
 ---
 
 # Introduction
