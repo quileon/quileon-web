@@ -21,22 +21,22 @@ export default function BlogListPage({ blogs }: BlogListPageProps) {
   return (
     <article className="flex flex-col gap-12 sm:px-10">
       {blogs.map((blog) => (
-        <Card
-          key={blog.filename}
-          as={Link}
-          className="flex flex-col"
-          href={`/blogs/${blog.filename.replace(/\.md$/, "")}`}
-        >
-          <CardHeader className="flex flex-col items-start">
-            <h3 className="text-medium">{blog.title}</h3>
-            <p className="text-small text-default-500">
-              {new Date(blog.date).toLocaleDateString(["en-ID", "id-ID"], {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
-          </CardHeader>
+        <Card key={blog.filename} className="flex flex-col">
+          <Link
+            color="foreground"
+            href={`/blogs/${blog.filename.replace(/\.md$/, "")}`}
+          >
+            <CardHeader className="flex flex-col items-start">
+              <h3 className="text-medium">{blog.title}</h3>
+              <p className="text-small text-default-500">
+                {new Date(blog.date).toLocaleDateString(["en-ID", "id-ID"], {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+            </CardHeader>
+          </Link>
           <Divider />
           <CardBody>
             <p className="text-small text-default-500">{blog.subtitle}</p>
